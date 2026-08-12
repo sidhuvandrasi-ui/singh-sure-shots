@@ -26,8 +26,6 @@ body{
     overflow-x:hidden;
 }
 
-/* BACKGROUND GLOW */
-
 body::before{
     content:"";
     position:fixed;
@@ -37,7 +35,7 @@ body::before{
     left:-180px;
     background:radial-gradient(
         circle,
-        rgba(0,255,170,.18),
+        rgba(255,43,214,.18),
         transparent 70%
     );
     filter:blur(25px);
@@ -53,7 +51,7 @@ body::after{
     right:-180px;
     background:radial-gradient(
         circle,
-        rgba(0,170,255,.15),
+        rgba(255,43,214,.15),
         transparent 70%
     );
     filter:blur(25px);
@@ -92,23 +90,23 @@ body::after{
         #050505
     );
 
-    border:1px solid rgba(0,255,170,.45);
+    border:1px solid rgba(255,43,214,.45);
 
     box-shadow:
-        0 0 18px rgba(0,255,170,.30),
-        0 0 45px rgba(0,255,170,.12),
-        inset 0 0 20px rgba(0,255,170,.08);
+        0 0 18px rgba(255,43,214,.30),
+        0 0 45px rgba(255,43,214,.12),
+        inset 0 0 20px rgba(255,43,214,.08);
 }
 
 
 .logo-text{
     font-size:22px;
     font-weight:900;
-    color:#00ffae;
+    color:#ff2bd6;
 
     text-shadow:
-        0 0 10px rgba(0,255,170,.65),
-        0 0 25px rgba(0,255,170,.25);
+        0 0 10px rgba(255,43,214,.65),
+        0 0 25px rgba(255,43,214,.25);
 }
 
 
@@ -126,7 +124,7 @@ h1{
 
 
 h1 span{
-    color:#00ffae;
+    color:#ff2bd6;
 }
 
 
@@ -140,7 +138,7 @@ h1 span{
 }
 
 .dot{
-    color:#00ffae;
+    color:#ff2bd6;
     padding:0 5px;
 }
 
@@ -151,7 +149,6 @@ h1 span{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:10px;
-
     margin-bottom:22px;
 }
 
@@ -178,10 +175,10 @@ h1 span{
 .stat:hover{
     transform:translateY(-3px);
 
-    border-color:rgba(0,255,170,.30);
+    border-color:rgba(255,43,214,.30);
 
     box-shadow:
-        0 12px 35px rgba(0,255,170,.08);
+        0 12px 35px rgba(255,43,214,.08);
 }
 
 
@@ -189,11 +186,11 @@ h1 span{
 
 .icon{
     font-size:21px;
-    color:#00ffae;
+    color:#ff2bd6;
     margin-bottom:8px;
 
     text-shadow:
-        0 0 12px rgba(0,255,170,.55);
+        0 0 12px rgba(255,43,214,.55);
 }
 
 
@@ -234,20 +231,20 @@ h1 span{
 
     text-decoration:none;
 
-    color:#00140d;
+    color:#fff;
 
     background:linear-gradient(
         135deg,
-        #00ffae,
-        #00d99a
+        #ff2bd6,
+        #d900a8
     );
 
     font-size:18px;
     font-weight:900;
 
     box-shadow:
-        0 0 20px rgba(0,255,174,.25),
-        0 12px 35px rgba(0,255,174,.12);
+        0 0 20px rgba(255,43,214,.25),
+        0 12px 35px rgba(255,43,214,.12);
 
     overflow:hidden;
 
@@ -291,8 +288,8 @@ h1 span{
     transform:translateY(-2px);
 
     box-shadow:
-        0 0 30px rgba(0,255,174,.38),
-        0 15px 45px rgba(0,255,174,.15);
+        0 0 30px rgba(255,43,214,.38),
+        0 15px 45px rgba(255,43,214,.15);
 }
 
 
@@ -305,18 +302,16 @@ h1 span{
 
 .telegram-note{
     margin-top:12px;
-
     font-size:13px;
-
     color:#777d7a;
 }
 
 
 .telegram-dot{
-    color:#00ffae;
+    color:#ff2bd6;
 
     text-shadow:
-        0 0 10px rgba(0,255,170,.60);
+        0 0 10px rgba(255,43,214,.60);
 }
 
 
@@ -345,7 +340,7 @@ h1 span{
 
 
 .redirect-box a{
-    color:#00ffae;
+    color:#ff2bd6;
 
     font-weight:bold;
 
