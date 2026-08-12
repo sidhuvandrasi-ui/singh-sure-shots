@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SINGH SURE SHOTS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050505;
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(0,110,255,.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(0,70,255,.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #090909 0%,
+            #050505 100%
+        );
+}
+
+.container{
+    width:100%;
+    max-width:520px;
+    padding:22px 15px;
+}
+
+.card{
+    width:100%;
+    padding:28px 20px 25px;
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,20,30,.95),
+            rgba(7,8,12,.98)
+        );
+
+    border:1px solid rgba(50,130,255,.20);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.55),
+        inset 0 0 30px rgba(50,100,255,.025);
+
+    text-align:center;
+}
+
+
+/* LOGO */
+
+.logo{
+    width:92px;
+    height:92px;
+
+    margin:0 auto 18px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle,
+            #151515 0%,
+            #070707 70%,
+            #020202 100%
+        );
+
+    border:2px solid #188cff;
+
+    box-shadow:
+        0 0 12px rgba(20,140,255,.75),
+        0 0 32px rgba(20,100,255,.30);
+
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#fff;
+}
+
+
+/* TITLE */
+
+h1{
+    font-size:36px;
+    line-height:1.05;
+
+    font-weight:950;
+    letter-spacing:.5px;
+
+    margin-bottom:9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #42a9ff
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.subtitle{
+    color:#a5a8af;
+
+    font-size:13px;
+
+    line-height:1.5;
+
+    margin-bottom:22px;
+}
+
+
+/* STATS */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:20px;
+}
+
+.stat{
+    flex:1;
+
+    padding:14px 8px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.025);
+
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.stat-icon{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.stat-number{
+    font-size:17px;
+    font-weight:900;
+    color:#fff;
+}
+
+.stat-label{
+    margin-top:3px;
+
+    color:#858992;
+
+    font-size:10px;
+}
+
+
+/* BUTTON */
+
+.join-btn{
+    width:100%;
+
+    min-height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1599ff,
+            #0879ee
+        );
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:900;
+
+    box-shadow:
+        0 9px 28px rgba(0,115,255,.30);
+
+    transition:.2s ease;
+}
+
+.join-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 13px 32px rgba(0,115,255,.45);
+}
+
+.join-btn:active{
+    transform:scale(.98);
+}
+
+
+/* BOTTOM */
+
+.note{
+    margin-top:15px;
+
+    color:#777c85;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+.redirect{
+    margin-top:10px;
+
+    color:#555b64;
+
+    font-size:9px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:390px){
+
+    .container{
+        padding:17px 11px;
+    }
+
+    .card{
+        padding:24px 15px 21px;
+    }
+
+    h1{
+        font-size:31px;
+    }
+
+    .subtitle{
+        font-size:12px;
+    }
+
+    .stats{
+        gap:8px;
+    }
+
+    .stat{
+        padding:12px 5px;
+    }
+
+    .stat-number{
+        font-size:15px;
+    }
+
+    .join-btn{
+        min-height:56px;
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+        <span>SSS</span>
+    </div>
+
+
+    <!-- TITLE -->
+
+    <h1>
+        SINGH SURE SHOTS
+    </h1>
+
+
+    <!-- SUBTITLE -->
+
+    <div class="subtitle">
+        Sure Shots • Community Channel
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                ◉
+            </div>
+
+            <div class="stat-number">
+                3.1K+
+            </div>
+
+            <div class="stat-label">
+                Members
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                ↻
+            </div>
+
+            <div class="stat-number">
+                Daily
+            </div>
+
+            <div class="stat-label">
+                Updates
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <div class="stat-number">
+                100%
+            </div>
+
+            <div class="stat-label">
+                Free
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TELEGRAM BUTTON -->
+
+    <a
+        class="join-btn"
+        href="https://t.me/+HTC_o2ezEqdkNjM1"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        ✈️ Join free on Telegram →
+    </a>
+
+
+    <div class="note">
+        ● Opens Telegram in a new tab
+    </div>
+
+
+    <div class="redirect">
+        Redirecting you to Telegram
+    </div>
+
+</div>
+
+</div>
+
+</body>
+  </html>
