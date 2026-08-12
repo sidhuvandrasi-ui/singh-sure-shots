@@ -1,327 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Singh's Sure Shots</title>
+<title>Singh's Sure Shots</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0d0610;
+    color:white;
+    overflow-x:hidden;
+}
+
+.page{
+    min-height:100vh;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 50% 20%,
+        rgba(255,0,160,.28) 0%,
+        rgba(150,0,100,.16) 22%,
+        transparent 42%),
+    linear-gradient(
+        180deg,
+        #170817 0%,
+        #18071a 45%,
+        #09050c 100%
+    );
+}
+
+/* BACKGROUND DOTS */
+
+.dot{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#ff8adf;
+    box-shadow:0 0 12px #ff36c7;
+    opacity:.6;
+}
+
+.d1{top:14%;left:21%}
+.d2{top:15%;right:18%}
+.d3{top:29%;left:20%}
+.d4{top:30%;right:18%}
+.d5{top:49%;left:50%}
+.d6{top:67%;left:22%}
+.d7{top:67%;right:20%}
+.d8{top:82%;left:22%}
+.d9{top:82%;right:18%}
+
+/* CONTENT */
+
+.container{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:850px;
+    margin:auto;
+    padding:55px 32px 55px;
+    text-align:center;
+}
+
+/* BIG CIRCLE */
+
+.logo-area{
+    position:relative;
+    width:430px;
+    height:430px;
+    max-width:92vw;
+    margin:0 auto 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo-area::before{
+    content:"";
+    position:absolute;
+    width:410px;
+    height:410px;
+    max-width:90vw;
+    max-height:90vw;
+    border-radius:50%;
+
+    border:2px solid rgba(177,36,220,.55);
+
+    box-shadow:
+    0 0 30px rgba(255,0,180,.15),
+    inset 0 0 30px rgba(255,0,180,.08);
+}
+
+.logo-area::after{
+    content:"";
+    position:absolute;
+    width:345px;
+    height:345px;
+    max-width:76vw;
+    max-height:76vw;
+    border-radius:50%;
+
+    border:3px solid #e934ae;
+
+    box-shadow:
+    0 0 15px #ff2dbb,
+    0 0 40px rgba(255,0,190,.55),
+    0 0 90px rgba(255,0,170,.25);
+}
+
+/* PURPLE GLOW */
+
+.glow{
+    position:absolute;
+    width:370px;
+    height:370px;
+    max-width:82vw;
+    max-height:82vw;
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,0,180,.34) 0%,
+        rgba(180,0,140,.20) 45%,
+        transparent 70%
+    );
+
+    filter:blur(8px);
+}
+
+/* INNER BLACK CIRCLE */
+
+.logo{
+    position:relative;
+    z-index:5;
+
+    width:265px;
+    height:265px;
+    max-width:60vw;
+    max-height:60vw;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle at 50% 45%,
+        #171717 0%,
+        #101010 70%,
+        #0a0a0a 100%
+    );
+
+    border:3px solid #df3aa9;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:
+    0 0 20px rgba(255,0,170,.35),
+    0 0 55px rgba(255,0,170,.25);
+}
+
+/* SINGH TEXT INSIDE CIRCLE */
+
+.logo span{
+    font-size:46px;
+    font-weight:900;
+    letter-spacing:1px;
+
+    color:white;
+
+    text-shadow:
+    0 0 8px white,
+    0 0 18px rgba(255,255,255,.35);
+}
+
+/* CHANNEL TITLE */
+
+h1{
+    font-size:58px;
+    line-height:1.08;
+    font-weight:900;
+    letter-spacing:1px;
+
+    color:#fff;
+
+    margin:0 auto 22px;
+
+    text-shadow:
+    0 2px 12px rgba(255,255,255,.15);
+}
+
+/* SUBTITLE */
+
+.subtitle{
+    font-size:25px;
+    color:#c8c1ca;
+    margin-bottom:70px;
+}
+
+.subtitle span{
+    color:#ff3fbe;
+    margin:0 12px;
+}
+
+/* CARDS */
+
+.stats{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+
+    margin-bottom:70px;
+}
+
+.card{
+    min-height:265px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,20,180,.12),
+        rgba(70,0,65,.20)
+    );
+
+    border:2px solid rgba(255,48,181,.30);
+
+    box-shadow:
+    inset 0 0 30px rgba(255,0,170,.05),
+    0 0 25px rgba(255,0,180,.05);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:25px 12px;
+}
+
+/* CARD ICON */
+
+.icon{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:55px;
+    color:#ff4fc6;
+
+    text-shadow:
+    0 0 12px #ff2ab7,
+    0 0 25px rgba(255,0,190,.5);
+
+    margin-bottom:15px;
+}
+
+.people{
+    font-size:52px;
+    color:#ff49c5;
+}
+
+.refresh{
+    font-size:55px;
+}
+
+.check{
+    font-size:63px;
+    font-weight:bold;
+}
+
+/* CARD NUMBER */
+
+.number{
+    font-size:42px;
+    font-weight:900;
+    color:#fff;
+
+    margin-bottom:12px;
+}
+
+/* CARD LABEL */
+
+.label{
+    font-size:25px;
+    color:#c8c1ca;
+}
+
+/* TELEGRAM BUTTON */
+
+.join-btn{
+    width:100%;
+    min-height:145px;
+
+    border-radius:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:38px;
+    font-weight:900;
+
+    background:
+    linear-gradient(
+        105deg,
+        #198cf5,
+        #086be8
+    );
+
+    box-shadow:
+    0 0 25px rgba(0,120,255,.55),
+    0 12px 45px rgba(0,80,255,.25);
+
+    transition:.25s ease;
+
+    margin-bottom:35px;
+}
+
+.join-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 35px rgba(0,140,255,.75),
+    0 15px 55px rgba(0,80,255,.35);
+}
+
+.telegram{
+    margin-right:10px;
+}
+
+.arrow{
+    margin-left:18px;
+}
+
+/* OPEN TELEGRAM */
+
+.open-text{
+    font-size:24px;
+    color:#bdb7c0;
+
+    margin-bottom:65px;
+}
+
+/* REDIRECT BOX */
+
+.redirect{
+    width:100%;
+    min-height:110px;
+
+    border-radius:55px;
+
+    border:2px solid rgba(255,40,180,.30);
+
+    background:rgba(255,255,255,.025);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    font-size:23px;
+    color:#c4bdc7;
+}
+
+.redirect a{
+    color:#ff43c2;
+    font-weight:900;
+    margin-left:8px;
+    text-decoration:underline;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .container{
+        padding:35px 32px 45px;
     }
 
-    body {
-      min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #fff;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(190, 0, 255, 0.20), transparent 28%),
-        radial-gradient(circle at 10% 85%, rgba(255, 0, 150, 0.12), transparent 30%),
-        #08070d;
-      overflow-x: hidden;
+    .logo-area{
+        width:430px;
+        height:430px;
+        margin-top:-10px;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-      background-size: 45px 45px;
-      mask-image: linear-gradient(to bottom, black, transparent);
+    h1{
+        font-size:42px;
+        letter-spacing:.5px;
+        white-space:nowrap;
     }
 
-    .container {
-      width: 100%;
-      max-width: 480px;
-      margin: auto;
-      padding: 42px 20px 35px;
-      text-align: center;
+    .subtitle{
+        font-size:20px;
+        white-space:nowrap;
+        margin-bottom:55px;
     }
 
-    /* LOGO */
-
-    .logo {
-      width: 108px;
-      height: 108px;
-      margin: 0 auto 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background:
-        radial-gradient(circle at 35% 30%, #ff4fc3, #b000ff 45%, #46005f 100%);
-
-      border: 3px solid #ff43c7;
-
-      box-shadow:
-        0 0 15px #ff24c4,
-        0 0 35px rgba(255, 0, 190, 0.65),
-        inset 0 0 25px rgba(255,255,255,0.12);
-
-      animation: glow 2.5s infinite alternate;
+    .stats{
+        gap:22px;
+        margin-bottom:55px;
     }
 
-    .logo span {
-      font-size: 38px;
-      font-weight: 1000;
-      letter-spacing: 2px;
-      color: #fff;
-
-      text-shadow:
-        0 0 8px #fff,
-        0 0 18px #ff31c8,
-        0 0 30px #ff00bb;
+    .card{
+        min-height:285px;
+        border-radius:28px;
     }
 
-    @keyframes glow {
-      from {
-        transform: scale(1);
-        box-shadow:
-          0 0 15px #ff24c4,
-          0 0 30px rgba(255, 0, 190, 0.5);
-      }
-
-      to {
-        transform: scale(1.04);
-        box-shadow:
-          0 0 20px #ff24c4,
-          0 0 50px rgba(255, 0, 190, 0.75);
-      }
+    .number{
+        font-size:34px;
     }
 
-    /* TITLE */
-
-    h1 {
-      font-size: 32px;
-      line-height: 1.15;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      margin-bottom: 12px;
-
-      background: linear-gradient(
-        90deg,
-        #ff75db,
-        #ffffff,
-        #e875ff
-      );
-
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      text-shadow: 0 0 20px rgba(255, 0, 200, 0.25);
+    .label{
+        font-size:20px;
     }
 
-    .subtitle {
-      font-size: 15px;
-      color: #aaa5b2;
-      margin-bottom: 30px;
+    .icon{
+        font-size:48px;
     }
 
-    /* INFO CARDS */
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 28px;
+    .join-btn{
+        min-height:125px;
+        border-radius:32px;
+        font-size:27px;
     }
 
-    .card {
-      min-height: 88px;
-      padding: 16px 8px;
-
-      border: 1px solid rgba(255, 52, 202, 0.28);
-      border-radius: 14px;
-
-      background: rgba(255, 255, 255, 0.045);
-      backdrop-filter: blur(12px);
-
-      box-shadow:
-        inset 0 1px rgba(255,255,255,0.05),
-        0 8px 25px rgba(0,0,0,0.25);
+    .open-text{
+        font-size:20px;
+        margin-bottom:55px;
     }
 
-    .number {
-      display: block;
-      font-size: 21px;
-      font-weight: 900;
-      color: #ff50d1;
-      margin-bottom: 7px;
+    .redirect{
+        min-height:105px;
+        font-size:18px;
+    }
+}
 
-      text-shadow: 0 0 12px rgba(255, 0, 190, 0.55);
+/* SMALL PHONES */
+
+@media(max-width:420px){
+
+    .container{
+        padding:25px 32px 40px;
     }
 
-    .label {
-      display: block;
-      font-size: 11px;
-      color: #a8a3ae;
-      line-height: 1.25;
+    .logo-area{
+        height:390px;
+        margin-top:-5px;
     }
 
-    /* JOIN BUTTON */
-
-    .join-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-
-      width: 100%;
-      min-height: 58px;
-
-      border-radius: 14px;
-
-      text-decoration: none;
-      color: white;
-
-      font-size: 17px;
-      font-weight: 900;
-      letter-spacing: 0.2px;
-
-      background: linear-gradient(
-        135deg,
-        #ff39c8,
-        #a600ff
-      );
-
-      border: 1px solid rgba(255,255,255,0.18);
-
-      box-shadow:
-        0 0 15px rgba(255, 0, 200, 0.45),
-        0 12px 30px rgba(110, 0, 130, 0.35);
-
-      transition: 0.25s ease;
+    .logo{
+        width:245px;
+        height:245px;
     }
 
-    .join-btn:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 0 25px rgba(255, 0, 200, 0.7),
-        0 15px 35px rgba(110, 0, 130, 0.45);
+    .logo span{
+        font-size:44px;
     }
 
-    .telegram-icon {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      background: white;
-      color: #a600ff;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-size: 14px;
-      font-weight: 900;
+    h1{
+        font-size:38px;
     }
 
-    .arrow {
-      font-size: 21px;
-      margin-left: 2px;
+    .subtitle{
+        font-size:18px;
+        margin-bottom:50px;
     }
 
-    /* BOTTOM TEXT */
-
-    .safe-text {
-      margin-top: 15px;
-      font-size: 12px;
-      color: #77727d;
+    .stats{
+        gap:18px;
     }
 
-    .bottom-line {
-      margin-top: 38px;
-      font-size: 12px;
-      color: #5f5a65;
+    .card{
+        min-height:275px;
     }
 
-    /* MOBILE */
-
-    @media (max-width: 360px) {
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      .card {
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-
-      .number {
-        font-size: 18px;
-      }
+    .number{
+        font-size:30px;
     }
-  </style>
+
+    .label{
+        font-size:18px;
+    }
+
+    .join-btn{
+        min-height:120px;
+        font-size:25px;
+    }
+
+    .open-text{
+        font-size:18px;
+    }
+
+    .redirect{
+        font-size:16px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <main class="container">
+<div class="page">
 
-    <!-- SSH LOGO -->
-    <div class="logo">
-      <span>SSH</span>
+    <!-- BACKGROUND DOTS -->
+    <div class="dot d1"></div>
+    <div class="dot d2"></div>
+    <div class="dot d3"></div>
+    <div class="dot d4"></div>
+    <div class="dot d5"></div>
+    <div class="dot d6"></div>
+    <div class="dot d7"></div>
+    <div class="dot d8"></div>
+    <div class="dot d9"></div>
+
+    <div class="container">
+
+        <!-- BIG CIRCLE -->
+        <div class="logo-area">
+
+            <div class="glow"></div>
+
+            <div class="logo">
+                <span>Singh</span>
+            </div>
+
+        </div>
+
+        <!-- CHANNEL NAME -->
+        <h1>Singh's Sure Shots</h1>
+
+        <!-- SUBTITLE -->
+        <div class="subtitle">
+            Telugu Community
+            <span>•</span>
+            Premium Updates
+        </div>
+
+        <!-- STATS -->
+        <div class="stats">
+
+            <div class="card">
+
+                <div class="icon people">♙♙</div>
+
+                <div class="number">
+                    3.1K+
+                </div>
+
+                <div class="label">
+                    Members
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon refresh">
+                    ↻
+                </div>
+
+                <div class="number">
+                    Daily
+                </div>
+
+                <div class="label">
+                    Updates
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon check">
+                    ✓
+                </div>
+
+                <div class="number">
+                    100%
+                </div>
+
+                <div class="label">
+                    Free
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TELEGRAM BUTTON -->
+
+        <a
+            href="https://t.me/+HTC_o2ezEqdkNjM1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="join-btn"
+        >
+
+            <span class="telegram">
+                ➤
+            </span>
+
+            Join free on Telegram
+
+            <span class="arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <!-- OPEN TELEGRAM TEXT -->
+
+        <div class="open-text">
+
+            <span style="color:#ff40bf;">
+                ●
+            </span>
+
+            &nbsp;
+
+            Opens Telegram in a new tab
+
+        </div>
+
+
+        <!-- REDIRECT BOX -->
+
+        <div class="redirect">
+
+            Redirecting you to Telegram...
+
+            <a
+                href="https://t.me/+HTC_o2ezEqdkNjM1"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Go now
+            </a>
+
+        </div>
+
     </div>
 
-    <!-- CHANNEL NAME -->
-    <h1>Singh's Sure Shots</h1>
-
-    <p class="subtitle">
-      Telugu Community • Premium Updates
-    </p>
-
-    <!-- STATS -->
-    <section class="stats">
-
-      <div class="card">
-        <span class="number">3.1K+</span>
-        <span class="label">Members</span>
-      </div>
-
-      <div class="card">
-        <span class="number">Daily</span>
-        <span class="label">Updates</span>
-      </div>
-
-      <div class="card">
-        <span class="number">100%</span>
-        <span class="label">Free</span>
-      </div>
-
-    </section>
-
-    <!-- TELEGRAM BUTTON -->
-    <a
-      class="join-btn"
-      href="https://t.me/+HTC_o2ezEqdkNjM1"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="telegram-icon">➤</span>
-      Join free on Telegram
-      <span class="arrow">→</span>
-    </a>
-
-    <p class="safe-text">
-      Tap the button above to join our Telegram community
-    </p>
-
-    <p class="bottom-line">
-      Singh's Sure Shots • Premium Community
-    </p>
-
-  </main>
+</div>
 
 </body>
-    </html>
+</html>
