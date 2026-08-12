@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 <title>Singh's Sure Shots</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -21,345 +20,208 @@ html{
 
 body{
     width:100%;
-    min-height:100vh;
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    color:#fff;
-    background:#0b050d;
+    min-width:0;
     overflow-x:hidden;
+    background:#0b050d;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
-/* =========================
-   MAIN PAGE
-========================= */
-
 .page{
-    position:relative;
     width:100%;
     min-height:100vh;
     overflow:hidden;
 
     background:
     radial-gradient(
-        circle at 50% 17%,
-        rgba(255,0,170,.25) 0%,
-        rgba(190,0,130,.15) 20%,
-        transparent 42%
+        circle at 50% 13%,
+        rgba(255,0,175,.28),
+        transparent 34%
     ),
-
     linear-gradient(
         180deg,
-        #160715 0%,
-        #19071a 45%,
+        #170817 0%,
+        #18071a 48%,
         #09050c 100%
     );
 }
 
-/* =========================
-   BACKGROUND DOTS
-========================= */
-
-.dot{
-    position:absolute;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-
-    background:#ff82dd;
-
-    box-shadow:
-    0 0 10px #ff32c2,
-    0 0 18px rgba(255,0,190,.6);
-
-    opacity:.65;
-}
-
-.d1{
-    top:15%;
-    left:20%;
-}
-
-.d2{
-    top:15%;
-    right:20%;
-}
-
-.d3{
-    top:31%;
-    left:18%;
-}
-
-.d4{
-    top:31%;
-    right:18%;
-}
-
-.d5{
-    top:49%;
-    left:50%;
-}
-
-.d6{
-    top:68%;
-    left:20%;
-}
-
-.d7{
-    top:68%;
-    right:20%;
-}
-
-.d8{
-    top:83%;
-    left:20%;
-}
-
-.d9{
-    top:83%;
-    right:20%;
-}
-
-/* =========================
-   CONTAINER
-========================= */
-
 .container{
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
+    padding:28px 16px 40px;
+    text-align:center;
     position:relative;
     z-index:2;
-
-    width:100%;
-    max-width:850px;
-
-    margin:0 auto;
-
-    padding:35px 25px 45px;
-
-    text-align:center;
-
-    overflow:hidden;
 }
 
-/* =========================
-   BIG LOGO AREA
-========================= */
+/* ================= LOGO ================= */
 
 .logo-area{
+    width:100%;
+    height:310px;
     position:relative;
-
-    width:430px;
-    height:430px;
-
-    max-width:100%;
-
-    margin:0 auto 15px;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
+    margin-bottom:15px;
 }
 
-/* OUTER RING */
-
-.logo-area::before{
+.logo-area:before{
     content:"";
-
     position:absolute;
 
-    width:410px;
-    height:410px;
-
-    max-width:95vw;
-    max-height:95vw;
+    width:290px;
+    height:290px;
 
     border-radius:50%;
 
-    border:2px solid rgba(145,30,220,.65);
+    border:2px solid rgba(165,35,220,.6);
 
     box-shadow:
-    0 0 25px rgba(150,0,220,.15),
-    inset 0 0 25px rgba(255,0,190,.05);
+    0 0 30px rgba(180,0,220,.18),
+    inset 0 0 30px rgba(255,0,180,.08);
 }
 
-/* PINK RING */
-
-.logo-area::after{
+.logo-area:after{
     content:"";
-
     position:absolute;
 
-    width:345px;
-    height:345px;
-
-    max-width:80vw;
-    max-height:80vw;
+    width:240px;
+    height:240px;
 
     border-radius:50%;
 
-    border:3px solid #ef38b5;
+    border:3px solid #ed39b5;
 
     box-shadow:
-    0 0 12px #ff27b9,
-    0 0 30px rgba(255,0,190,.7),
-    0 0 70px rgba(255,0,180,.25);
+    0 0 14px #ff2cbd,
+    0 0 35px rgba(255,0,190,.65),
+    0 0 70px rgba(255,0,180,.22);
 }
-
-/* PURPLE GLOW */
 
 .glow{
     position:absolute;
 
-    width:380px;
-    height:380px;
-
-    max-width:88vw;
-    max-height:88vw;
+    width:280px;
+    height:280px;
 
     border-radius:50%;
 
     background:
     radial-gradient(
         circle,
-        rgba(255,0,190,.32) 0%,
-        rgba(190,0,140,.20) 45%,
-        transparent 72%
+        rgba(255,0,190,.32),
+        rgba(190,0,140,.16) 45%,
+        transparent 70%
     );
 
     filter:blur(8px);
 }
 
-/* =========================
-   INNER BLACK CIRCLE
-========================= */
-
 .logo{
     position:relative;
     z-index:5;
 
-    width:265px;
-    height:265px;
-
-    max-width:62vw;
-    max-height:62vw;
+    width:185px;
+    height:185px;
 
     border-radius:50%;
 
     background:
     radial-gradient(
         circle,
-        #171717 0%,
-        #111 70%,
-        #090909 100%
+        #181818,
+        #0b0b0b
     );
 
-    border:3px solid #e23bad;
+    border:3px solid #df3aa9;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
     box-shadow:
-    0 0 18px rgba(255,0,180,.35),
-    0 0 50px rgba(255,0,180,.20);
+    0 0 20px rgba(255,0,180,.35),
+    0 0 50px rgba(255,0,180,.2);
 }
-
-/* SINGH TEXT */
 
 .logo span{
     color:#fff;
 
-    font-size:46px;
-
+    font-size:36px;
     font-weight:900;
-
     letter-spacing:1px;
 
     text-shadow:
-    0 0 7px #fff,
+    0 0 8px #fff,
     0 0 18px rgba(255,255,255,.4);
 }
 
-/* =========================
-   CHANNEL TITLE
-========================= */
+/* ================= TITLE ================= */
 
 h1{
     width:100%;
 
-    margin:0 auto 18px;
-
-    color:#fff;
-
-    font-size:56px;
-
-    line-height:1.1;
+    font-size:34px;
+    line-height:1.12;
 
     font-weight:900;
 
-    letter-spacing:.5px;
+    color:#fff;
+
+    margin-bottom:14px;
 
     overflow-wrap:anywhere;
-
-    text-shadow:
-    0 2px 12px rgba(255,255,255,.15);
 }
 
-/* =========================
-   SUBTITLE
-========================= */
+/* ================= SUBTITLE ================= */
 
 .subtitle{
     width:100%;
 
-    margin:0 auto 55px;
+    font-size:16px;
+    line-height:1.5;
 
     color:#c7c0ca;
 
-    font-size:24px;
-
-    line-height:1.5;
-
-    overflow-wrap:anywhere;
+    margin-bottom:38px;
 }
 
 .subtitle span{
     color:#ff40bd;
-
-    margin:0 10px;
+    padding:0 5px;
 }
 
-/* =========================
-   STATS
-========================= */
+/* ================= CARDS ================= */
 
 .stats{
     width:100%;
 
     display:grid;
-
     grid-template-columns:repeat(3,minmax(0,1fr));
 
-    gap:18px;
+    gap:7px;
 
-    margin-bottom:55px;
+    margin-bottom:38px;
 }
-
-/* CARD */
 
 .card{
     width:100%;
+    min-width:0;
 
-    min-height:260px;
+    height:205px;
 
-    border-radius:28px;
+    padding:12px 4px;
 
-    padding:22px 8px;
+    border-radius:20px;
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     justify-content:center;
 
     background:
@@ -369,90 +231,69 @@ h1{
         rgba(70,0,65,.20)
     );
 
-    border:2px solid rgba(255,50,185,.30);
+    border:1px solid rgba(255,50,185,.3);
 
     box-shadow:
-    inset 0 0 25px rgba(255,0,170,.04),
-    0 0 20px rgba(255,0,180,.04);
+    inset 0 0 20px rgba(255,0,170,.04);
 }
 
-/* ICON */
-
 .icon{
-    height:65px;
+    height:48px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     color:#ff4fc6;
 
-    font-size:50px;
+    font-size:37px;
 
-    margin-bottom:12px;
+    margin-bottom:9px;
 
     text-shadow:
     0 0 10px #ff25b8,
-    0 0 24px rgba(255,0,190,.5);
+    0 0 20px rgba(255,0,190,.5);
 }
 
 .people{
-    font-size:46px;
+    font-size:34px;
 }
 
 .refresh{
-    font-size:54px;
+    font-size:42px;
 }
 
 .check{
-    font-size:60px;
-
+    font-size:46px;
     font-weight:bold;
 }
 
-/* NUMBER */
-
 .number{
-    color:#fff;
-
-    font-size:39px;
+    font-size:21px;
+    font-weight:900;
 
     line-height:1.15;
 
-    font-weight:900;
-
-    margin-bottom:10px;
+    margin-bottom:7px;
 }
-
-/* LABEL */
 
 .label{
+    font-size:14px;
     color:#c6c0c8;
-
-    font-size:23px;
-
-    line-height:1.2;
 }
 
-/* =========================
-   TELEGRAM BUTTON
-========================= */
+/* ================= TELEGRAM ================= */
 
 .join-btn{
     width:100%;
+    min-height:95px;
 
-    min-height:125px;
+    padding:12px;
 
-    padding:15px 20px;
-
-    border-radius:32px;
+    border-radius:25px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
@@ -461,8 +302,7 @@ h1{
 
     color:#fff;
 
-    font-size:34px;
-
+    font-size:20px;
     font-weight:900;
 
     background:
@@ -473,82 +313,65 @@ h1{
     );
 
     box-shadow:
-    0 0 25px rgba(0,120,255,.55),
-    0 12px 45px rgba(0,80,255,.25);
+    0 0 25px rgba(0,120,255,.5),
+    0 12px 35px rgba(0,80,255,.22);
 
-    transition:.25s ease;
-
-    margin-bottom:28px;
-}
-
-.join-btn:hover{
-    transform:translateY(-2px);
-
-    box-shadow:
-    0 0 35px rgba(0,140,255,.75),
-    0 15px 50px rgba(0,80,255,.35);
+    margin-bottom:22px;
 }
 
 .telegram{
-    margin-right:9px;
+    margin-right:8px;
 }
 
 .arrow{
-    margin-left:14px;
+    margin-left:8px;
 }
 
-/* =========================
-   OPEN TELEGRAM
-========================= */
+/* ================= OPEN TEXT ================= */
 
 .open-text{
     width:100%;
 
-    margin-bottom:48px;
-
     color:#beb8c1;
 
-    font-size:22px;
+    font-size:15px;
 
     line-height:1.5;
+
+    margin-bottom:35px;
 }
 
 .open-dot{
     color:#ff40bf;
-
-    font-size:25px;
 }
 
-/* =========================
-   REDIRECT BOX
-========================= */
+/* ================= REDIRECT ================= */
 
 .redirect{
     width:100%;
 
-    min-height:100px;
+    min-height:82px;
 
-    padding:18px 20px;
+    padding:14px;
 
-    border-radius:55px;
+    border-radius:42px;
 
-    border:2px solid rgba(255,40,180,.30);
+    border:1px solid rgba(255,40,180,.3);
 
     background:rgba(255,255,255,.025);
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
 
-    color:#c4bdc7;
-
-    font-size:21px;
+    font-size:14px;
 
     line-height:1.5;
+
+    color:#c4bdc7;
 }
 
 .redirect a{
@@ -556,353 +379,155 @@ h1{
 
     font-weight:900;
 
-    margin-left:7px;
+    margin-left:6px;
 
     text-decoration:underline;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* ================= LARGER PHONES ================= */
 
-@media(max-width:700px){
+@media(min-width:400px){
 
     .container{
-        width:100%;
-
-        padding:
-        20px
-        15px
-        40px;
+        padding-left:20px;
+        padding-right:20px;
     }
-
-    /* LOGO */
 
     .logo-area{
-        width:100%;
-
-        height:350px;
-
-        margin-bottom:15px;
-    }
-
-    .logo-area::before{
-        width:340px;
         height:340px;
     }
 
-    .logo-area::after{
-        width:285px;
-        height:285px;
+    .logo-area:before{
+        width:320px;
+        height:320px;
+    }
+
+    .logo-area:after{
+        width:265px;
+        height:265px;
     }
 
     .glow{
-        width:315px;
-        height:315px;
-    }
-
-    .logo{
-        width:220px;
-        height:220px;
-    }
-
-    .logo span{
-        font-size:40px;
-    }
-
-    /* TITLE */
-
-    h1{
-        width:100%;
-
-        font-size:38px;
-
-        line-height:1.12;
-
-        white-space:normal;
-
-        word-break:normal;
-
-        overflow-wrap:anywhere;
-
-        margin-bottom:15px;
-    }
-
-    /* SUBTITLE */
-
-    .subtitle{
-        width:100%;
-
-        font-size:18px;
-
-        line-height:1.5;
-
-        white-space:normal;
-
-        margin-bottom:42px;
-    }
-
-    .subtitle span{
-        margin:0 6px;
-    }
-
-    /* CARDS */
-
-    .stats{
-        width:100%;
-
-        grid-template-columns:
-        repeat(3,minmax(0,1fr));
-
-        gap:8px;
-
-        margin-bottom:42px;
-    }
-
-    .card{
-        min-height:225px;
-
-        border-radius:22px;
-
-        padding:15px 4px;
-    }
-
-    .icon{
-        height:50px;
-
-        font-size:39px;
-
-        margin-bottom:8px;
-    }
-
-    .people{
-        font-size:37px;
-    }
-
-    .refresh{
-        font-size:43px;
-    }
-
-    .check{
-        font-size:48px;
-    }
-
-    .number{
-        font-size:25px;
-
-        margin-bottom:7px;
-    }
-
-    .label{
-        font-size:16px;
-    }
-
-    /* BUTTON */
-
-    .join-btn{
-        width:100%;
-
-        min-height:105px;
-
-        padding:12px;
-
-        border-radius:27px;
-
-        font-size:22px;
-
-        line-height:1.3;
-    }
-
-    .arrow{
-        margin-left:8px;
-    }
-
-    /* OPEN */
-
-    .open-text{
-        font-size:17px;
-
-        margin-bottom:38px;
-    }
-
-    .open-dot{
-        font-size:20px;
-    }
-
-    /* REDIRECT */
-
-    .redirect{
-        min-height:85px;
-
-        border-radius:45px;
-
-        padding:15px;
-
-        font-size:15px;
-    }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width:400px){
-
-    .container{
-        padding-left:12px;
-        padding-right:12px;
-    }
-
-    .logo-area{
-        height:325px;
-    }
-
-    .logo-area::before{
         width:305px;
         height:305px;
     }
 
-    .logo-area::after{
-        width:255px;
-        height:255px;
-    }
-
-    .glow{
-        width:280px;
-        height:280px;
-    }
-
     .logo{
-        width:195px;
-        height:195px;
+        width:205px;
+        height:205px;
     }
 
     .logo span{
-        font-size:35px;
-    }
-
-    h1{
-        font-size:33px;
-    }
-
-    .subtitle{
-        font-size:16px;
-
-        margin-bottom:38px;
-    }
-
-    .stats{
-        gap:6px;
-    }
-
-    .card{
-        min-height:205px;
-
-        border-radius:20px;
-    }
-
-    .number{
-        font-size:21px;
-    }
-
-    .label{
-        font-size:14px;
-    }
-
-    .icon{
-        font-size:36px;
-    }
-
-    .people{
-        font-size:34px;
-    }
-
-    .refresh{
         font-size:40px;
     }
 
-    .check{
-        font-size:44px;
+    h1{
+        font-size:38px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .card{
+        height:225px;
+    }
+
+    .number{
+        font-size:24px;
+    }
+
+    .label{
+        font-size:16px;
     }
 
     .join-btn{
-        min-height:95px;
-
-        font-size:19px;
-
-        border-radius:24px;
-    }
-
-    .open-text{
-        font-size:15px;
-    }
-
-    .redirect{
-        font-size:14px;
+        min-height:105px;
+        font-size:22px;
     }
 }
 
-/* =========================
-   VERY SMALL PHONES
-========================= */
+/* ================= TABLET / DESKTOP ================= */
 
-@media(max-width:340px){
+@media(min-width:700px){
 
     .container{
-        padding-left:9px;
-        padding-right:9px;
+        max-width:850px;
+        padding:45px 30px 55px;
     }
 
     .logo-area{
-        height:300px;
+        height:420px;
     }
 
-    .logo-area::before{
-        width:280px;
-        height:280px;
+    .logo-area:before{
+        width:400px;
+        height:400px;
     }
 
-    .logo-area::after{
-        width:235px;
-        height:235px;
+    .logo-area:after{
+        width:335px;
+        height:335px;
     }
 
     .glow{
+        width:365px;
+        height:365px;
+    }
+
+    .logo{
         width:255px;
         height:255px;
     }
 
-    .logo{
-        width:180px;
-        height:180px;
-    }
-
     .logo span{
-        font-size:32px;
+        font-size:50px;
     }
 
     h1{
-        font-size:29px;
+        font-size:55px;
     }
 
     .subtitle{
-        font-size:14px;
+        font-size:24px;
+        margin-bottom:60px;
+    }
+
+    .stats{
+        gap:18px;
+        margin-bottom:60px;
     }
 
     .card{
-        min-height:190px;
+        height:260px;
+        border-radius:28px;
+    }
+
+    .icon{
+        font-size:50px;
     }
 
     .number{
-        font-size:18px;
+        font-size:38px;
     }
 
     .label{
-        font-size:12px;
+        font-size:22px;
     }
 
     .join-btn{
-        font-size:17px;
+        min-height:125px;
+        font-size:34px;
+        border-radius:32px;
+    }
+
+    .open-text{
+        font-size:21px;
+    }
+
+    .redirect{
+        min-height:100px;
+        font-size:20px;
     }
 }
 
@@ -913,24 +538,9 @@ h1{
 
 <div class="page">
 
-    <!-- BACKGROUND DOTS -->
-
-    <div class="dot d1"></div>
-    <div class="dot d2"></div>
-    <div class="dot d3"></div>
-    <div class="dot d4"></div>
-    <div class="dot d5"></div>
-    <div class="dot d6"></div>
-    <div class="dot d7"></div>
-    <div class="dot d8"></div>
-    <div class="dot d9"></div>
-
-
     <div class="container">
 
-        <!-- =====================
-             BIG SINGH CIRCLE
-        ====================== -->
+        <!-- LOGO -->
 
         <div class="logo-area">
 
@@ -943,18 +553,14 @@ h1{
         </div>
 
 
-        <!-- =====================
-             CHANNEL NAME
-        ====================== -->
+        <!-- CHANNEL NAME -->
 
         <h1>
             Singh's Sure Shots
         </h1>
 
 
-        <!-- =====================
-             SUBTITLE
-        ====================== -->
+        <!-- SUBTITLE -->
 
         <div class="subtitle">
 
@@ -967,14 +573,9 @@ h1{
         </div>
 
 
-        <!-- =====================
-             STATS
-        ====================== -->
+        <!-- CARDS -->
 
         <div class="stats">
-
-
-            <!-- MEMBERS -->
 
             <div class="card">
 
@@ -993,8 +594,6 @@ h1{
             </div>
 
 
-            <!-- DAILY -->
-
             <div class="card">
 
                 <div class="icon refresh">
@@ -1012,8 +611,6 @@ h1{
             </div>
 
 
-            <!-- FREE -->
-
             <div class="card">
 
                 <div class="icon check">
@@ -1030,19 +627,16 @@ h1{
 
             </div>
 
-
         </div>
 
 
-        <!-- =====================
-             TELEGRAM BUTTON
-        ====================== -->
+        <!-- TELEGRAM BUTTON -->
 
         <a
-            class="join-btn"
             href="https://t.me/+HTC_o2ezEqdkNjM1"
             target="_blank"
             rel="noopener noreferrer"
+            class="join-btn"
         >
 
             <span class="telegram">
@@ -1058,15 +652,11 @@ h1{
         </a>
 
 
-        <!-- =====================
-             OPEN TELEGRAM TEXT
-        ====================== -->
+        <!-- OPEN TEXT -->
 
         <div class="open-text">
 
-            <span class="open-dot">
-                ●
-            </span>
+            <span class="open-dot">●</span>
 
             &nbsp;
 
@@ -1075,15 +665,11 @@ h1{
         </div>
 
 
-        <!-- =====================
-             REDIRECT BOX
-        ====================== -->
+        <!-- REDIRECT -->
 
         <div class="redirect">
 
-            <span>
-                Redirecting you to Telegram...
-            </span>
+            Redirecting you to Telegram...
 
             <a
                 href="https://t.me/+HTC_o2ezEqdkNjM1"
@@ -1094,7 +680,6 @@ h1{
             </a>
 
         </div>
-
 
     </div>
 
