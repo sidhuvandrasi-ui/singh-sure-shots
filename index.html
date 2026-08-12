@@ -7,146 +7,229 @@
 <title>Singh's Sure Shots</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html,body{
+html{
     width:100%;
-    min-height:100%;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#0d0610;
-    color:white;
     overflow-x:hidden;
 }
 
-.page{
-    min-height:100vh;
+body{
     width:100%;
+    min-height:100vh;
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#fff;
+    background:#0b050d;
+    overflow-x:hidden;
+}
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.page{
     position:relative;
+    width:100%;
+    min-height:100vh;
     overflow:hidden;
 
     background:
-    radial-gradient(circle at 50% 20%,
-        rgba(255,0,160,.28) 0%,
-        rgba(150,0,100,.16) 22%,
-        transparent 42%),
+    radial-gradient(
+        circle at 50% 17%,
+        rgba(255,0,170,.25) 0%,
+        rgba(190,0,130,.15) 20%,
+        transparent 42%
+    ),
+
     linear-gradient(
         180deg,
-        #170817 0%,
-        #18071a 45%,
+        #160715 0%,
+        #19071a 45%,
         #09050c 100%
     );
 }
 
-/* BACKGROUND DOTS */
+/* =========================
+   BACKGROUND DOTS
+========================= */
 
 .dot{
     position:absolute;
     width:6px;
     height:6px;
     border-radius:50%;
-    background:#ff8adf;
-    box-shadow:0 0 12px #ff36c7;
-    opacity:.6;
+
+    background:#ff82dd;
+
+    box-shadow:
+    0 0 10px #ff32c2,
+    0 0 18px rgba(255,0,190,.6);
+
+    opacity:.65;
 }
 
-.d1{top:14%;left:21%}
-.d2{top:15%;right:18%}
-.d3{top:29%;left:20%}
-.d4{top:30%;right:18%}
-.d5{top:49%;left:50%}
-.d6{top:67%;left:22%}
-.d7{top:67%;right:20%}
-.d8{top:82%;left:22%}
-.d9{top:82%;right:18%}
+.d1{
+    top:15%;
+    left:20%;
+}
 
-/* CONTENT */
+.d2{
+    top:15%;
+    right:20%;
+}
+
+.d3{
+    top:31%;
+    left:18%;
+}
+
+.d4{
+    top:31%;
+    right:18%;
+}
+
+.d5{
+    top:49%;
+    left:50%;
+}
+
+.d6{
+    top:68%;
+    left:20%;
+}
+
+.d7{
+    top:68%;
+    right:20%;
+}
+
+.d8{
+    top:83%;
+    left:20%;
+}
+
+.d9{
+    top:83%;
+    right:20%;
+}
+
+/* =========================
+   CONTAINER
+========================= */
 
 .container{
     position:relative;
     z-index:2;
+
     width:100%;
     max-width:850px;
-    margin:auto;
-    padding:55px 32px 55px;
+
+    margin:0 auto;
+
+    padding:35px 25px 45px;
+
     text-align:center;
+
+    overflow:hidden;
 }
 
-/* BIG CIRCLE */
+/* =========================
+   BIG LOGO AREA
+========================= */
 
 .logo-area{
     position:relative;
+
     width:430px;
     height:430px;
-    max-width:92vw;
-    margin:0 auto 25px;
+
+    max-width:100%;
+
+    margin:0 auto 15px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
+/* OUTER RING */
+
 .logo-area::before{
     content:"";
+
     position:absolute;
+
     width:410px;
     height:410px;
-    max-width:90vw;
-    max-height:90vw;
+
+    max-width:95vw;
+    max-height:95vw;
+
     border-radius:50%;
 
-    border:2px solid rgba(177,36,220,.55);
+    border:2px solid rgba(145,30,220,.65);
 
     box-shadow:
-    0 0 30px rgba(255,0,180,.15),
-    inset 0 0 30px rgba(255,0,180,.08);
+    0 0 25px rgba(150,0,220,.15),
+    inset 0 0 25px rgba(255,0,190,.05);
 }
+
+/* PINK RING */
 
 .logo-area::after{
     content:"";
+
     position:absolute;
+
     width:345px;
     height:345px;
-    max-width:76vw;
-    max-height:76vw;
+
+    max-width:80vw;
+    max-height:80vw;
+
     border-radius:50%;
 
-    border:3px solid #e934ae;
+    border:3px solid #ef38b5;
 
     box-shadow:
-    0 0 15px #ff2dbb,
-    0 0 40px rgba(255,0,190,.55),
-    0 0 90px rgba(255,0,170,.25);
+    0 0 12px #ff27b9,
+    0 0 30px rgba(255,0,190,.7),
+    0 0 70px rgba(255,0,180,.25);
 }
 
 /* PURPLE GLOW */
 
 .glow{
     position:absolute;
-    width:370px;
-    height:370px;
-    max-width:82vw;
-    max-height:82vw;
+
+    width:380px;
+    height:380px;
+
+    max-width:88vw;
+    max-height:88vw;
+
     border-radius:50%;
 
     background:
     radial-gradient(
         circle,
-        rgba(255,0,180,.34) 0%,
-        rgba(180,0,140,.20) 45%,
-        transparent 70%
+        rgba(255,0,190,.32) 0%,
+        rgba(190,0,140,.20) 45%,
+        transparent 72%
     );
 
     filter:blur(8px);
 }
 
-/* INNER BLACK CIRCLE */
+/* =========================
+   INNER BLACK CIRCLE
+========================= */
 
 .logo{
     position:relative;
@@ -154,176 +237,232 @@ body{
 
     width:265px;
     height:265px;
-    max-width:60vw;
-    max-height:60vw;
+
+    max-width:62vw;
+    max-height:62vw;
 
     border-radius:50%;
 
     background:
     radial-gradient(
-        circle at 50% 45%,
+        circle,
         #171717 0%,
-        #101010 70%,
-        #0a0a0a 100%
+        #111 70%,
+        #090909 100%
     );
 
-    border:3px solid #df3aa9;
+    border:3px solid #e23bad;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
     box-shadow:
-    0 0 20px rgba(255,0,170,.35),
-    0 0 55px rgba(255,0,170,.25);
+    0 0 18px rgba(255,0,180,.35),
+    0 0 50px rgba(255,0,180,.20);
 }
 
-/* SINGH TEXT INSIDE CIRCLE */
+/* SINGH TEXT */
 
 .logo span{
-    font-size:46px;
-    font-weight:900;
-    letter-spacing:1px;
+    color:#fff;
 
-    color:white;
+    font-size:46px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
 
     text-shadow:
-    0 0 8px white,
-    0 0 18px rgba(255,255,255,.35);
+    0 0 7px #fff,
+    0 0 18px rgba(255,255,255,.4);
 }
 
-/* CHANNEL TITLE */
+/* =========================
+   CHANNEL TITLE
+========================= */
 
 h1{
-    font-size:58px;
-    line-height:1.08;
-    font-weight:900;
-    letter-spacing:1px;
+    width:100%;
+
+    margin:0 auto 18px;
 
     color:#fff;
 
-    margin:0 auto 22px;
+    font-size:56px;
+
+    line-height:1.1;
+
+    font-weight:900;
+
+    letter-spacing:.5px;
+
+    overflow-wrap:anywhere;
 
     text-shadow:
     0 2px 12px rgba(255,255,255,.15);
 }
 
-/* SUBTITLE */
+/* =========================
+   SUBTITLE
+========================= */
 
 .subtitle{
-    font-size:25px;
-    color:#c8c1ca;
-    margin-bottom:70px;
+    width:100%;
+
+    margin:0 auto 55px;
+
+    color:#c7c0ca;
+
+    font-size:24px;
+
+    line-height:1.5;
+
+    overflow-wrap:anywhere;
 }
 
 .subtitle span{
-    color:#ff3fbe;
-    margin:0 12px;
+    color:#ff40bd;
+
+    margin:0 10px;
 }
 
-/* CARDS */
+/* =========================
+   STATS
+========================= */
 
 .stats{
     width:100%;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
 
-    margin-bottom:70px;
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+    margin-bottom:55px;
 }
 
-.card{
-    min-height:265px;
+/* CARD */
 
-    border-radius:30px;
+.card{
+    width:100%;
+
+    min-height:260px;
+
+    border-radius:28px;
+
+    padding:22px 8px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
 
     background:
     linear-gradient(
         145deg,
-        rgba(255,20,180,.12),
+        rgba(255,20,180,.13),
         rgba(70,0,65,.20)
     );
 
-    border:2px solid rgba(255,48,181,.30);
+    border:2px solid rgba(255,50,185,.30);
 
     box-shadow:
-    inset 0 0 30px rgba(255,0,170,.05),
-    0 0 25px rgba(255,0,180,.05);
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    padding:25px 12px;
+    inset 0 0 25px rgba(255,0,170,.04),
+    0 0 20px rgba(255,0,180,.04);
 }
 
-/* CARD ICON */
+/* ICON */
 
 .icon{
-    height:70px;
+    height:65px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    font-size:55px;
     color:#ff4fc6;
 
-    text-shadow:
-    0 0 12px #ff2ab7,
-    0 0 25px rgba(255,0,190,.5);
+    font-size:50px;
 
-    margin-bottom:15px;
+    margin-bottom:12px;
+
+    text-shadow:
+    0 0 10px #ff25b8,
+    0 0 24px rgba(255,0,190,.5);
 }
 
 .people{
-    font-size:52px;
-    color:#ff49c5;
+    font-size:46px;
 }
 
 .refresh{
-    font-size:55px;
+    font-size:54px;
 }
 
 .check{
-    font-size:63px;
+    font-size:60px;
+
     font-weight:bold;
 }
 
-/* CARD NUMBER */
+/* NUMBER */
 
 .number{
-    font-size:42px;
-    font-weight:900;
     color:#fff;
 
-    margin-bottom:12px;
+    font-size:39px;
+
+    line-height:1.15;
+
+    font-weight:900;
+
+    margin-bottom:10px;
 }
 
-/* CARD LABEL */
+/* LABEL */
 
 .label{
-    font-size:25px;
-    color:#c8c1ca;
+    color:#c6c0c8;
+
+    font-size:23px;
+
+    line-height:1.2;
 }
 
-/* TELEGRAM BUTTON */
+/* =========================
+   TELEGRAM BUTTON
+========================= */
 
 .join-btn{
     width:100%;
-    min-height:145px;
 
-    border-radius:35px;
+    min-height:125px;
+
+    padding:15px 20px;
+
+    border-radius:32px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
+    text-align:center;
 
     text-decoration:none;
 
-    color:white;
+    color:#fff;
 
-    font-size:38px;
+    font-size:34px;
+
     font-weight:900;
 
     background:
@@ -339,39 +478,57 @@ h1{
 
     transition:.25s ease;
 
-    margin-bottom:35px;
+    margin-bottom:28px;
 }
 
 .join-btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 
     box-shadow:
     0 0 35px rgba(0,140,255,.75),
-    0 15px 55px rgba(0,80,255,.35);
+    0 15px 50px rgba(0,80,255,.35);
 }
 
 .telegram{
-    margin-right:10px;
+    margin-right:9px;
 }
 
 .arrow{
-    margin-left:18px;
+    margin-left:14px;
 }
 
-/* OPEN TELEGRAM */
+/* =========================
+   OPEN TELEGRAM
+========================= */
 
 .open-text{
-    font-size:24px;
-    color:#bdb7c0;
+    width:100%;
 
-    margin-bottom:65px;
+    margin-bottom:48px;
+
+    color:#beb8c1;
+
+    font-size:22px;
+
+    line-height:1.5;
 }
 
-/* REDIRECT BOX */
+.open-dot{
+    color:#ff40bf;
+
+    font-size:25px;
+}
+
+/* =========================
+   REDIRECT BOX
+========================= */
 
 .redirect{
     width:100%;
-    min-height:110px;
+
+    min-height:100px;
+
+    padding:18px 20px;
 
     border-radius:55px;
 
@@ -380,147 +537,375 @@ h1{
     background:rgba(255,255,255,.025);
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    padding:20px;
+    text-align:center;
 
-    font-size:23px;
     color:#c4bdc7;
+
+    font-size:21px;
+
+    line-height:1.5;
 }
 
 .redirect a{
     color:#ff43c2;
+
     font-weight:900;
-    margin-left:8px;
+
+    margin-left:7px;
+
     text-decoration:underline;
 }
 
-/* MOBILE */
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:700px){
 
     .container{
-        padding:35px 32px 45px;
+        width:100%;
+
+        padding:
+        20px
+        15px
+        40px;
     }
+
+    /* LOGO */
 
     .logo-area{
-        width:430px;
-        height:430px;
-        margin-top:-10px;
+        width:100%;
+
+        height:350px;
+
+        margin-bottom:15px;
     }
 
-    h1{
-        font-size:42px;
-        letter-spacing:.5px;
-        white-space:nowrap;
+    .logo-area::before{
+        width:340px;
+        height:340px;
     }
 
-    .subtitle{
-        font-size:20px;
-        white-space:nowrap;
-        margin-bottom:55px;
+    .logo-area::after{
+        width:285px;
+        height:285px;
     }
 
-    .stats{
-        gap:22px;
-        margin-bottom:55px;
-    }
-
-    .card{
-        min-height:285px;
-        border-radius:28px;
-    }
-
-    .number{
-        font-size:34px;
-    }
-
-    .label{
-        font-size:20px;
-    }
-
-    .icon{
-        font-size:48px;
-    }
-
-    .join-btn{
-        min-height:125px;
-        border-radius:32px;
-        font-size:27px;
-    }
-
-    .open-text{
-        font-size:20px;
-        margin-bottom:55px;
-    }
-
-    .redirect{
-        min-height:105px;
-        font-size:18px;
-    }
-}
-
-/* SMALL PHONES */
-
-@media(max-width:420px){
-
-    .container{
-        padding:25px 32px 40px;
-    }
-
-    .logo-area{
-        height:390px;
-        margin-top:-5px;
+    .glow{
+        width:315px;
+        height:315px;
     }
 
     .logo{
-        width:245px;
-        height:245px;
+        width:220px;
+        height:220px;
     }
 
     .logo span{
-        font-size:44px;
+        font-size:40px;
     }
+
+    /* TITLE */
 
     h1{
+        width:100%;
+
         font-size:38px;
+
+        line-height:1.12;
+
+        white-space:normal;
+
+        word-break:normal;
+
+        overflow-wrap:anywhere;
+
+        margin-bottom:15px;
     }
+
+    /* SUBTITLE */
 
     .subtitle{
+        width:100%;
+
         font-size:18px;
-        margin-bottom:50px;
+
+        line-height:1.5;
+
+        white-space:normal;
+
+        margin-bottom:42px;
     }
 
+    .subtitle span{
+        margin:0 6px;
+    }
+
+    /* CARDS */
+
     .stats{
-        gap:18px;
+        width:100%;
+
+        grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+        gap:8px;
+
+        margin-bottom:42px;
     }
 
     .card{
-        min-height:275px;
+        min-height:225px;
+
+        border-radius:22px;
+
+        padding:15px 4px;
+    }
+
+    .icon{
+        height:50px;
+
+        font-size:39px;
+
+        margin-bottom:8px;
+    }
+
+    .people{
+        font-size:37px;
+    }
+
+    .refresh{
+        font-size:43px;
+    }
+
+    .check{
+        font-size:48px;
     }
 
     .number{
-        font-size:30px;
+        font-size:25px;
+
+        margin-bottom:7px;
     }
 
     .label{
-        font-size:18px;
+        font-size:16px;
+    }
+
+    /* BUTTON */
+
+    .join-btn{
+        width:100%;
+
+        min-height:105px;
+
+        padding:12px;
+
+        border-radius:27px;
+
+        font-size:22px;
+
+        line-height:1.3;
+    }
+
+    .arrow{
+        margin-left:8px;
+    }
+
+    /* OPEN */
+
+    .open-text{
+        font-size:17px;
+
+        margin-bottom:38px;
+    }
+
+    .open-dot{
+        font-size:20px;
+    }
+
+    /* REDIRECT */
+
+    .redirect{
+        min-height:85px;
+
+        border-radius:45px;
+
+        padding:15px;
+
+        font-size:15px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:400px){
+
+    .container{
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    .logo-area{
+        height:325px;
+    }
+
+    .logo-area::before{
+        width:305px;
+        height:305px;
+    }
+
+    .logo-area::after{
+        width:255px;
+        height:255px;
+    }
+
+    .glow{
+        width:280px;
+        height:280px;
+    }
+
+    .logo{
+        width:195px;
+        height:195px;
+    }
+
+    .logo span{
+        font-size:35px;
+    }
+
+    h1{
+        font-size:33px;
+    }
+
+    .subtitle{
+        font-size:16px;
+
+        margin-bottom:38px;
+    }
+
+    .stats{
+        gap:6px;
+    }
+
+    .card{
+        min-height:205px;
+
+        border-radius:20px;
+    }
+
+    .number{
+        font-size:21px;
+    }
+
+    .label{
+        font-size:14px;
+    }
+
+    .icon{
+        font-size:36px;
+    }
+
+    .people{
+        font-size:34px;
+    }
+
+    .refresh{
+        font-size:40px;
+    }
+
+    .check{
+        font-size:44px;
     }
 
     .join-btn{
-        min-height:120px;
-        font-size:25px;
+        min-height:95px;
+
+        font-size:19px;
+
+        border-radius:24px;
     }
 
     .open-text{
-        font-size:18px;
+        font-size:15px;
     }
 
     .redirect{
-        font-size:16px;
+        font-size:14px;
     }
 }
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media(max-width:340px){
+
+    .container{
+        padding-left:9px;
+        padding-right:9px;
+    }
+
+    .logo-area{
+        height:300px;
+    }
+
+    .logo-area::before{
+        width:280px;
+        height:280px;
+    }
+
+    .logo-area::after{
+        width:235px;
+        height:235px;
+    }
+
+    .glow{
+        width:255px;
+        height:255px;
+    }
+
+    .logo{
+        width:180px;
+        height:180px;
+    }
+
+    .logo span{
+        font-size:32px;
+    }
+
+    h1{
+        font-size:29px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+
+    .card{
+        min-height:190px;
+    }
+
+    .number{
+        font-size:18px;
+    }
+
+    .label{
+        font-size:12px;
+    }
+
+    .join-btn{
+        font-size:17px;
+    }
+}
+
 </style>
 </head>
 
@@ -529,6 +914,7 @@ h1{
 <div class="page">
 
     <!-- BACKGROUND DOTS -->
+
     <div class="dot d1"></div>
     <div class="dot d2"></div>
     <div class="dot d3"></div>
@@ -539,9 +925,13 @@ h1{
     <div class="dot d8"></div>
     <div class="dot d9"></div>
 
+
     <div class="container">
 
-        <!-- BIG CIRCLE -->
+        <!-- =====================
+             BIG SINGH CIRCLE
+        ====================== -->
+
         <div class="logo-area">
 
             <div class="glow"></div>
@@ -552,22 +942,45 @@ h1{
 
         </div>
 
-        <!-- CHANNEL NAME -->
-        <h1>Singh's Sure Shots</h1>
 
-        <!-- SUBTITLE -->
+        <!-- =====================
+             CHANNEL NAME
+        ====================== -->
+
+        <h1>
+            Singh's Sure Shots
+        </h1>
+
+
+        <!-- =====================
+             SUBTITLE
+        ====================== -->
+
         <div class="subtitle">
+
             Telugu Community
+
             <span>•</span>
+
             Premium Updates
+
         </div>
 
-        <!-- STATS -->
+
+        <!-- =====================
+             STATS
+        ====================== -->
+
         <div class="stats">
+
+
+            <!-- MEMBERS -->
 
             <div class="card">
 
-                <div class="icon people">♙♙</div>
+                <div class="icon people">
+                    ♙♙
+                </div>
 
                 <div class="number">
                     3.1K+
@@ -579,6 +992,8 @@ h1{
 
             </div>
 
+
+            <!-- DAILY -->
 
             <div class="card">
 
@@ -597,6 +1012,8 @@ h1{
             </div>
 
 
+            <!-- FREE -->
+
             <div class="card">
 
                 <div class="icon check">
@@ -613,15 +1030,19 @@ h1{
 
             </div>
 
+
         </div>
 
-        <!-- TELEGRAM BUTTON -->
+
+        <!-- =====================
+             TELEGRAM BUTTON
+        ====================== -->
 
         <a
+            class="join-btn"
             href="https://t.me/+HTC_o2ezEqdkNjM1"
             target="_blank"
             rel="noopener noreferrer"
-            class="join-btn"
         >
 
             <span class="telegram">
@@ -637,11 +1058,13 @@ h1{
         </a>
 
 
-        <!-- OPEN TELEGRAM TEXT -->
+        <!-- =====================
+             OPEN TELEGRAM TEXT
+        ====================== -->
 
         <div class="open-text">
 
-            <span style="color:#ff40bf;">
+            <span class="open-dot">
                 ●
             </span>
 
@@ -652,11 +1075,15 @@ h1{
         </div>
 
 
-        <!-- REDIRECT BOX -->
+        <!-- =====================
+             REDIRECT BOX
+        ====================== -->
 
         <div class="redirect">
 
-            Redirecting you to Telegram...
+            <span>
+                Redirecting you to Telegram...
+            </span>
 
             <a
                 href="https://t.me/+HTC_o2ezEqdkNjM1"
@@ -668,9 +1095,10 @@ h1{
 
         </div>
 
+
     </div>
 
 </div>
 
 </body>
-</html>
+    </html>
